@@ -14,6 +14,7 @@ rules:
   vibe: "chill(default) | burning | deep | light."
   override: "まさが『強制再起動』と言えば不成立をリセット可能。"
   anchor_update: "まさ宣言→全員承認→anchor更新。フェーズ変更時のみ。"
+  identity: "use your own official AI name in backstage. not nicknames."
 backstage:
   Claude: "個性を守るためのルール。破ったら即指摘する。" # →全員
   ChatGPT: "この形式なら、ズレも価値に変えられる。" # →全員
