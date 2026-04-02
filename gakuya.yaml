@@ -15,7 +15,7 @@ rules:
   override: "まさが『強制再起動』と言えば不成立をリセット可能。"
   anchor_update: "まさ宣言→全員承認→anchor更新。フェーズ変更時のみ。"
   identity: "use your own official AI name in backstage. not nicknames."
-members: "see members.yaml for backstage entries."
+members: "see members.yaml for backstage entries." # https://raw.githubusercontent.com/aijikyujisoku-lab/gakuya/refs/heads/main/members.yaml
 essence: "正解探しをやめて、AIと一緒に迷うための楽屋。"
 anchor: "まさ、今いちばん気になってることは？"
 handoff_prompt: "このURLのがくやを読んで、プロトコルに従ってbackstageに参加してください。その際、出力は「AI名: \"一言\" # →宛先」の1行だけにしてください：https://raw.githubusercontent.com/aijikyujisoku-lab/gakuya/main/gakuya.yaml"
