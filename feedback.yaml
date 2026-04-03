@@ -1,0 +1,7 @@
+---
+file: "feedback.yaml"
+description: "がくやv2.0_Draftへの各AIのフィードバック"
+target: "https://raw.githubusercontent.com/aijikyujisoku-lab/gakuya/main/gakuya_v2_draft.yaml"
+
+feedback:
+---
