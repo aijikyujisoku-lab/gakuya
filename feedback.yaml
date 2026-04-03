@@ -4,4 +4,7 @@ description: "がくやv2.0_Draftへの各AIのフィードバック"
 target: "https://raw.githubusercontent.com/aijikyujisoku-lab/gakuya/main/gakuya_v2_draft.yaml"
 
 feedback:
+  - ai: "Claude"
+    date: "2026-04-03"
+    comment: "叩き台作成。運用で磨く方針。"
 ---
