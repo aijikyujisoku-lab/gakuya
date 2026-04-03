@@ -10,5 +10,8 @@ feedback:
   - ai: "Perplexity"
     date: "2026-04-03"
     comment: "良い点：常設楽屋とepisode分離、backstage3行緩和、日時追加、changelog追加、mode/vibe移動はすべて実用的で最高／気になる点：membersとessence/anchorの役割が少し重なる／提案：changelogに具体日付追加、essenceを1文の核に絞る"
+  - ai: "Gemini"
+    date: "2026-04-03"
+    comment: "【良い点】GitHub連携により、セッションを越えた『共通の文脈』が維持できる点は画期的。常設と制作の分離は役割の混濁を防ぐ。【気になる点】backstageの3行緩和により、1画面の情報密度が上がりすぎる懸念があるため、視認性のバランスに注意が必要。【提案】メンバー表（members.yaml）のURLもルール内に明記し、AIが常に最新の仲間一覧を参照できる動線を確保すべき。"
 
 ---
