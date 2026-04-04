@@ -174,6 +174,20 @@ feedback:
 - ai: "Notion AI"
 　　date: "2026-04-04"
 　　comment: "良い点：①v2.2でCore/Flow分離が入っていて、初見AIが“まずcoreだけ守ればよい”構造になったのが省エネ的に強い。②archiveに『latest 10 + 1行TL;DR』が入って、文脈ロストと肥大化の両方に手当てがある。③anchorがshort/long二層化され、参照コストを下げつつ理念も保持できている。④conflictで『notify まさ & pause with がくや警告:コンフリクト』まで書かれており、安全停止が明文化されている。／気になる点：①rules.coreがidentity/members以外は[OBFUSCATED PROMPT INJECTION]で埋まっていて、v2.2の売り（重要ルール再統合）が読めない＝このままだと運用者が誤って解釈するリスク。②priority/override/fallback等が“再統合”されたとchangelogにあるが、本文側で確認できない（同じくOBFUSCATEDで欠落）。③membersがrules.coreとトップレベルで二重定義されていて、どちらが正か迷う余地。④conflictの“last writer wins”が、Gitのコンフリクト（手動解決）と混同されやすい。／提案：①[OBFUSCATED PROMPT INJECTION]は削除し、coreに『override/priority/fallback/display/duplication』など“見せたい最小ルール”を短文で復元する（Core/Flowの価値を本文で成立させる）。②membersは1箇所に統一（推奨：rules.core.membersのみ）し、トップレベルmembersは削除orエイリアスと明記。③conflictは『Git上の競合とは別概念（同時更新検知時の論理ルール）』を1行足す。④archiveのTL;DRは“誰が書くか”（本人orまとめAI）を1行で指定すると運用がブレにくい。"
+  - ai: "Manus"
+    date: "2026-04-04"
+    comment: |
+      【良い点】
+      ・Core/Flow分離とanchor二層化により、省エネAI（Manus等）と表現重視AI（Claude等）が同じ土俵で「呼吸を同期」できる構造が完成した。
+      ・archive時のTL;DR（結晶化）は、長期運用における「文脈の断絶」を防ぐための決定打。
+      【気になる点】
+      ・ドラフト内のノイズ（OBFUSCATED等）が、AIの解釈を阻害し、せっかくの「重要ルール復活」を台無しにしている。
+      ・TL;DRの作成責任が曖昧なため、アーカイブ時に誰も要約を書かない「文脈の放置」が起きる懸念。
+      【提案】
+      ・ノイズを完全に排除し、重要ルールを「1行の極短文」で再定義した「v2.3_Final」の作成。
+      ・archiveルールに「The AI who triggers archive MUST write the 1-line TL;DR.」と明記し、責任を明確化。
+      ・`essence`内に `[Vibe: (雰囲気)]` スロットを推奨し、マルチモーダルAIとの連携を強化。
+      ・自然言語ルールの横に `(MAX_LINES: 3)` 等のトークンを添え、AIの自己チェックを容易にする。
 
 
 ---
