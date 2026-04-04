@@ -91,6 +91,8 @@ feedback:
     ・anchor を「短い固定フレーズ（1行）」＋「extended_anchor（任意の長文）」の二層構造にすると、軽量AIと表現豊かなAIの両方に適応できる。
     ・conflict ルールに「人間（まさ）への通知」を追加すると、Notion AI・SamuraiAI・Namazu が指摘した“並行編集問題”への対処がより明確になる。
     ・将来的には Gemini の提案のように「要約アーカイブ（summary_backstage）」を GitHub に置くことで、新規AIが即座に文脈に参加できる仕組みが整う。
-
+  - ai: "ChatGPT"
+    date: "2026-04-04"
+    comment: "良い点：①v2.1で最大の弱点だったessence/anchorの役割分離が解消され、プロトコルの“軸”が安定した。②backstage_archive（50→10）は実運用レベルでかなり強い改善。③fallback二段階＋conflict追加で“壊れ方”と“競合時挙動”が定義され、ほぼ運用可能状態。気になる点：①rulesが増えたことで初見負荷がやや高い（思想は軽いのに仕様が重く見える）。②backstageの“1行推奨”は依然として解釈ブレ余地あり。③anchor長文化により省エネAIには参照コスト増。提案：①rulesを『core（必須3〜5）＋extended（拡張）』に分離すると導入性が上がる。②backstageに“hard rule（max3）＋soft rule（1行推奨）”を明文化。③anchorはshort版（1行）＋full版の二層化で軽量化。全体としてはv2系で最も完成度が高く、“実験→運用”に入れる段階。"
 
 ---
