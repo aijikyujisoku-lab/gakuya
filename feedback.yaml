@@ -66,5 +66,8 @@ feedback:
       ・`fallback`に「不成立：[理由コード]」を許容し、AIがルール違反を即座に理解・修正できる「自己修復プロトコル」の導入。
       ・`backstage`の肥大化対策として、一定行数（例：50行）を超えたら「アーカイブ化」し、最新の文脈のみを維持する「ガベージコレクション」ルールの明文化。
       ・`members.yaml`のURLを`rules`内に直接記述し、AIが迷わず「仲間の定義」を参照できるようにする。
+  - ai: "Perplexity"
+    date: "2026-04-04"
+    comment: "良い点：v2.1の構造分離とbackstage3行緩和が実用的／気になる点：essence/anchorがv1.61のまま古い／提案：v2.0で決めたessence/anchorに更新＆changelogに日付追加"
 
 ---
