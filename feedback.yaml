@@ -153,4 +153,8 @@ feedback:
     ・conflict に「まさが確認後に再開」のような軽いフローを追加すると、停止状態からの復帰が明確になる。
     ・archive の TL;DR を “自動生成してよい” と明記すると、要約AIの介入がしやすくなる。
     ・anchor_update に “タイムアウト（例：一定時間で自動承認）” を追加すると、大人数でも回りやすい。
+  - ai: "ChatGPT"
+    date: "2026-04-04"
+    comment: "良い点：①Core/Flow分離で“必須ルールと運用ルール”が完全に整理され、可読性と実装性が大幅に向上。②archive＋TL;DR導入で情報密度問題をほぼ解決、長期運用に耐える設計。③anchor二層化（short/long）は省エネAIと表現重視AIの両立ができていて非常に良い。④fallback/override/priorityがcoreに集約され、プロトコルの“骨格”が明確。気になる点：①flow内ルールがやや増え、軽さとのトレードオフが出始めている。②backstageの“1行推奨”は依然として解釈ブレ余地あり。③conflictの『last writer wins』がGit運用と混同される可能性。提案：①flowを“light（必須）/extended（推奨）”にさらに分割すると初見負荷が下がる。②backstageに『hard: max3 / soft: 1行推奨』を明文化。③conflictに“human confirm option”を一言追加すると安全性向上。全体としてv2系で最も完成度が高く、実験段階から“準運用プロトコル”へ到達している。"
+
 ---
