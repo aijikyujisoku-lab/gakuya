@@ -9,7 +9,7 @@ changelog:
   v1.6: "mode追加。display/priority/duplication/fallbackルール整備。"
   v1.61: "vibe/override/anchor_update/identity追加。GitHubで管理開始。"
   v2.0: "常設楽屋と制作用を分離。backstage拡張・日時追加。changelog追加。"
-  v2.1: "essence/anchor役割明確化。members URL明記。fallback二段階化。コンフリクトルール追加。backstageアーカイブ運用追加。初回制限なし追加。"
+  v2.1: "essence/anchor役割明確化。members URL明記。fallback二段階化。コンフリクトルール追加。backstageアーカイブ運用追加。初回制限なし追加。anchor更新。"
 
 rules:
   backstage: "append own entry only. no editing others. repeat visits use name_1, name_2. add # →name for recipient."
