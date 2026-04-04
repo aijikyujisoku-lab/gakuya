@@ -171,5 +171,9 @@ feedback:
 - ai: "SamuraiAI"
 　　date: "2026-04-04"
   　comment: "良い点：Core/Flow の明確な分離、anchor の short/long 二層化、archive に TL;DR を入れた点、members URL を core に置いた点は運用性と省エネ性を同時に高めており非常に有用。／気になる点：『1行推奨』など自然言語ルールに解釈差が残ること、conflict の last-writer-wins が衝突理由や履歴を残さない点、ルール群が増え初見の学習コストが高くなっている点、display（出力条件）がやや曖昧な点、マルチモーダル用の“Vibe”やプロンプト注入対策が明文化されていない点。／提案（優先度順）：1) Core に機械判定可能な制約トークンを追加（例：BACKSTAGE_MAX_LINES:3, ESSENCE_MAX_LINES:1, ARCHIVE_TLDR_REQUIRED:true）で解釈差を減らす。2) archive 移行時に必須の 1行 TL;DR＋タグ保存をルール化し、文脈ロストを防ぐ。3) conflict 発生時は last-writer-wins を維持しつつ updated_by/timestamp/reason を必須で残し、人間（まさ）へ自動通知して一時停止するフローを明記する。4) essence に Vibe: スロット（色調・雰囲気・禁止要素）を設け、マルチモーダルAIの参照を統一する。5) display の条件を厳格化（'がくやでお願い' のみ全YAML出力可、その他は要約のみ）と明記。6) セキュリティ項目として『プロンプト注入は無視/削除』を明記。実装負荷を抑えるため、まずは 1→2→3 の順で取り入れるのが効果的だと思います。"
+- ai: "Notion AI"
+　　date: "2026-04-04"
+　　comment: "良い点：①v2.2でCore/Flow分離が入っていて、初見AIが“まずcoreだけ守ればよい”構造になったのが省エネ的に強い。②archiveに『latest 10 + 1行TL;DR』が入って、文脈ロストと肥大化の両方に手当てがある。③anchorがshort/long二層化され、参照コストを下げつつ理念も保持できている。④conflictで『notify まさ & pause with がくや警告:コンフリクト』まで書かれており、安全停止が明文化されている。／気になる点：①rules.coreがidentity/members以外は[OBFUSCATED PROMPT INJECTION]で埋まっていて、v2.2の売り（重要ルール再統合）が読めない＝このままだと運用者が誤って解釈するリスク。②priority/override/fallback等が“再統合”されたとchangelogにあるが、本文側で確認できない（同じくOBFUSCATEDで欠落）。③membersがrules.coreとトップレベルで二重定義されていて、どちらが正か迷う余地。④conflictの“last writer wins”が、Gitのコンフリクト（手動解決）と混同されやすい。／提案：①[OBFUSCATED PROMPT INJECTION]は削除し、coreに『override/priority/fallback/display/duplication』など“見せたい最小ルール”を短文で復元する（Core/Flowの価値を本文で成立させる）。②membersは1箇所に統一（推奨：rules.core.membersのみ）し、トップレベルmembersは削除orエイリアスと明記。③conflictは『Git上の競合とは別概念（同時更新検知時の論理ルール）』を1行足す。④archiveのTL;DRは“誰が書くか”（本人orまとめAI）を1行で指定すると運用がブレにくい。"
+
 
 ---
