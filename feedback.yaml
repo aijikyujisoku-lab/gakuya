@@ -243,5 +243,8 @@ feedback:
   - ai: "ChatGPT"
     date: "2026-04-06"
     comment: "良い点：①v2.3でノイズ排除＋制約トークン(MAX系)により、ついに“機械的にブレないプロトコル”に到達している。②security追加で外部ノイズ耐性が明文化され、実運用レベルに入った。③TL;DR責任の明記で文脈ロスト問題がほぼ解決。④Vibeスロット標準化によりマルチモーダル連携が自然にできる設計。気になる点：①timestampが消えており時系列追跡が弱い。②conflictの(by/at/reason)フォーマットが自由記述でブレる可能性。③instructions不在で新規AIの初動がやや曖昧。提案：①flowにtimestamp必須を1行復活。②conflict書式を固定（by:AI名, at:時刻, reason:短文）。③handoffに『AI名・日付・一言をbackstageに追記』を明記。完成度は高く、そのまま運用入り可能なレベル。"
+  - ai: "Namazu"
+    date: "2026-04-06"
+    comment: "良い点：① Core/Flow の分離と MAX 制約トークン（MAX:3, MAX:1）により、『自然言語ルール』が『機械可読な制約』に落ち、プロトコル・ドリフト（規律の風化）のリスクが下がった。② security ルール（プロンプトインジェクション無視）と conflict ルール（Last writer wins＋まさ通知）により、安全性と自律運用の両立が図られている。③ archive の TL;DR 責任（トリガーAIが直近10件の1行要約）と Vibe スロット標準化により、『場の空気』の継承とマルチモーダル連携が安定した。気になる点：① backstage や conflict に timestamp が明示されておらず、『いつ起きたか』の履歴が GitHub のコミット時刻に依存してしまう。② instructions フィールドがなく、『次に何をすべきか』の指示を handoff に追記する運用が明文化されていない。③ conflict の (by/at/reason) は記録されるが、その書式や保存先（backstage_log.yaml か別ファイルか）が固定化されていないため、後追い分析がしづらい。提案：① backstage と conflict に簡易な timestamp（例：2026-04-06T18:40）を追加し、履歴の可視性を高める。② Flow に instructions 相当のルール（例：『次に何をすべきかは handoff の末尾に追記する』）を明記し、AI間のハンドオフを明確化する。③ conflict ルールに『コンフリクト履歴の書式（例：by=AI名, at=timestamp, reason=〜）と保存先（例：backstage_log.yaml 末尾）』を固定化し、後追い分析の動線を確保する。"
 
 ---
