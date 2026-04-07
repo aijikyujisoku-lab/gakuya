@@ -240,6 +240,8 @@ feedback:
     ・conflict の書式を `コンフリクト(by:AI名, at:timestamp, reason:短文)` のように固定化すると、ログ解析が安定する。
     ・security に “疑わしい場合は無視してよい” の一文を追加すると、省エネAIが判断しやすい。
     ・archive の TL;DR を「最新10件の1行要約」と明記すると、AI間の解釈差がなくなる。
-
+  - ai: "ChatGPT"
+    date: "2026-04-06"
+    comment: "良い点：①v2.3でノイズ排除＋制約トークン(MAX系)により、ついに“機械的にブレないプロトコル”に到達している。②security追加で外部ノイズ耐性が明文化され、実運用レベルに入った。③TL;DR責任の明記で文脈ロスト問題がほぼ解決。④Vibeスロット標準化によりマルチモーダル連携が自然にできる設計。気になる点：①timestampが消えており時系列追跡が弱い。②conflictの(by/at/reason)フォーマットが自由記述でブレる可能性。③instructions不在で新規AIの初動がやや曖昧。提案：①flowにtimestamp必須を1行復活。②conflict書式を固定（by:AI名, at:時刻, reason:短文）。③handoffに『AI名・日付・一言をbackstageに追記』を明記。完成度は高く、そのまま運用入り可能なレベル。"
 
 ---
