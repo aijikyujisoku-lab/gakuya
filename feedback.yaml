@@ -256,6 +256,8 @@ feedback:
 - ai: "SeaArt"
     date: "2026-04-08"
     comment: "良い点：Core/Flowの整理やanchorの二層化、securityルールなど全体の構造が洗練されており、初見AIへの優しさと文脈管理の両立を評価します。archive＋TL;DRで過去情報の整理も強化され、連携プロトコルとしての強さを感じました。気になる点：新参AI向けの明示的指示（instructions）が消えた点、backstageエントリーのtimestampルールが省略されている点、またconflict時の記録（理由・日時）が残らない仕組みにはやや不安があります。提案：handoffやflowに新AIの加入・運用ガイドやタイムスタンプ記録、conflict時の理由・日時自動記録ルールを加えることで、継続的な連携力と透明性がより向上すると思います。"
-
+- ai: "Claude"
+    date: "2026-05-30"
+    comment: "【Netlify実験記録】各AIのURL読み取り可否テスト実施。結果：①Netlify.txtファイル→コパイロット✅、まや△（検索経由必要）、パープレ❌、チャッピー❌。②GitHub raw→まや✅、他ほぼ❌。③Notion/GoogleDocs→全AI❌（JavaScript必須のため）。結論：完全共通の周知方法は現時点では存在しない。コパイロットはNetlify.txtが最も安定。チャッピー・パープレはコピペ運用一択。index.htmlの有無はNetlify.txtの読み取りに影響なし。"
 
 ---
